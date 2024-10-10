@@ -11,16 +11,16 @@
 }
 
 :root {
-  --background: #d5d1c6;
-  --foreground: #1f336c;
+  --background: #d6d3cb;
+  --foreground: #163025;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #163025;
     --foreground: #d5d1c6;
   }
-}
+} */
 
 body {
   color: var(--foreground);
@@ -39,13 +39,13 @@ body {
     @apply  border-green-50 bg-green-50 px-8 py-5 text-white
   }
   .btn_dark_green { 
-    @apply  bg-green-90 px-8 py-4 text-white transition-all hover:bg-black
+    @apply  bg-green-900 px-8 py-4 text-white transition-all hover:bg-lime-800
   }
   .btn_dark_green_outline  { 
     @apply border-gray-20 bg-green-90 px-8 py-5 text-white
   }
   
-  .max-container {
+  .max-container {  
     @apply mx-auto max-w-[1440px];
   }
 
