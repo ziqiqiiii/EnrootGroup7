@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { NAV_LINKS } from "@/constant";
 import Button from "./Button";
-import Dropdown from "./Dropdown";
+import ClientDropdown from "./ClientDropdown";
 
 const Navbar = () => {
   return (
@@ -28,22 +28,13 @@ const Navbar = () => {
 		<Button
 			type="button"
 			title="Sign Up Now"
-			icon="/user_icon.svg"
+			icon="/add-user.png"
 			variant="btn_white"
 		/>
 	  </div>
 
-	  <div className="lg:hidden">
-		<Image 
-			src="/menu.png"
-			alt="menu"
-			width={32}
-			height={32}
-			className="cursor-pointer inline-block dark:invert "
-			data-dropdown-toggle="dropdownHover"
-			data-dropdown-trigger="hover"
-		/>
-		<Dropdown/>
+	  <div className="lg:hidden relative">
+		<ClientDropdown/>
 	  </div>
     </nav>
   )

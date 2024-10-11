@@ -46,6 +46,11 @@ module.exports = {
       borderRadius: {
         '5xl': '40px',
       },
+      opacity: {
+        '10': '0.1',
+        '20': '0.2',
+        '95': '0.95',
+      },
     },
   },
   plugins: [],
