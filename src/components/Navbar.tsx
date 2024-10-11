@@ -24,15 +24,15 @@ const Navbar = () => {
             </Link>
         ))}
       </ul>
-	  <div className="lg:flexCenter hidden">
+	  <div className="lg:flexCenter">
 		<Button
 			type="button"
 			title="Sign Up Now"
 			icon="/add-user.png"
-			variant="btn_white"
+			variant="btn_white shadow-2xl shadow-green-500/40"
+			link = "https://forms.office.com/Pages/DesignPageV2.aspx?origin=NeoPortalPage&subpage=design&id=drd2NJDpck-5UGJImDFiPbCyV33gL2RDgf4IvAKYHrhUM1BIVEhVQ1g1R0tDUVZaWE81WVdGQVFBNi4u&analysis=false"
 		/>
 	  </div>
-
 	  <div className="lg:hidden relative">
 		<ClientDropdown/>
 	  </div>
