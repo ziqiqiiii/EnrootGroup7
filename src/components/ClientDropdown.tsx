@@ -23,7 +23,7 @@ const ClientDropdown = () => {
     <div
 		onMouseEnter={handleMouseEnter} 
 		onMouseLeave={handleMouseLeave} 
-		className="relative"	
+		className="relative"
 	>
       <Image
         src="/menu.png"
@@ -32,7 +32,7 @@ const ClientDropdown = () => {
         height={32}
 		aria-expanded={isDropdownOpen}
       />
-      <div id="dropdownHover" className={`absolute top-10 right-0 z-10 w-40 bg-green-900 rounded-lg shadow dark:bg-gray-700 transition-all duration-300 ease-in-out ${isDropdownOpen ? 'block' : 'hidden'}`}>
+      <div id="dropdownHover" className={`absolute top-12 right-0 z-10 w-40 bg-green-900 rounded-lg shadow dark:bg-gray-700 transition-all duration-300 ease-in-out ${isDropdownOpen ? 'block' : 'hidden'}`}>
         <ul className="py-2 text-sm text-gray-200" aria-labelledby="dropdownHoverButton ">
           {NAV_LINKS.map((link) => (
             <li key={link.key}>
