@@ -1,23 +1,36 @@
-import React from 'react'
-import Image from 'next/image'
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
-type ButtonProps ={
-    type: 'button' | 'submit';
-    title: string | '';
-    icon?: string;
-    variant: 'btn_dark_green' | 'btn_green' | 'btn_dark_green_outline' | 'btn_white' | 'btn_white_text';
-}
+type ButtonProps = {
+  type: 'button' | 'submit';
+  title: string;
+  icon?: string;
+  variant: string;
+  link?: string; // Allow it to be optional
+};
 
-const Button = ({ type, title, icon, variant}: ButtonProps) => {
-  return (
+const Button = ({ type, title, icon, variant, link }: ButtonProps) => {
+  const content = (
+    <>
+      {icon && <Image src={icon} alt={title} width={24} height={24} />}
+      <label className="bold-16 whitespace-nowrap">{title}</label>
+    </>
+  );
+
+  // If a link is provided, wrap the button with the Link component
+  return link ? (
+    <Link href={link} className={`flexCenter gap-3 ${variant} border rounded-full cursor-pointer`}>
+        {content}
+    </Link>
+  ) : (
     <button
-        className={`flexCenter gap-3 ${variant} border rounded-full cursor-pointer`}
-        type={type}
+      className={`flexCenter gap-3 ${variant} border rounded-full cursor-pointer`}
+      type={type}
     >
-        { icon && <Image src={icon} alt={title} width={24} height={24}/> }
-        <label className="bold-16 whitespace-nowrap">{title}</label>
+      {content}
     </button>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;
