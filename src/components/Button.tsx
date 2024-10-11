@@ -7,10 +7,11 @@ type ButtonProps = {
   title: string;
   icon?: string;
   variant: string;
-  link?: string; // Allow it to be optional
+  link?: string;
+  linkNewTab?: boolean;
 };
 
-const Button = ({ type, title, icon, variant, link }: ButtonProps) => {
+const Button = ({ type, title, icon, variant, link, linkNewTab}: ButtonProps) => {
   const content = (
     <>
       {icon && <Image src={icon} alt={title} width={24} height={24} />}
@@ -20,7 +21,8 @@ const Button = ({ type, title, icon, variant, link }: ButtonProps) => {
 
   // If a link is provided, wrap the button with the Link component
   return link ? (
-    <Link href={link} className={`flexCenter gap-3 ${variant} border rounded-full cursor-pointer`}>
+    <Link href={link} className={`flexCenter gap-3 ${variant} border rounded-full cursor-pointer`}
+                                {...(linkNewTab && { target: '_blank', rel: 'noopener noreferrer' })}>
         {content}
     </Link>
   ) : (
