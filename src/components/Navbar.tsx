@@ -31,6 +31,7 @@ const Navbar = () => {
 			icon="/add-user.png"
 			variant="btn_white shadow-2xl shadow-green-500/40"
 			link = "https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&token=a7300996ccaf4d338df9b36b29961891&id=drd2NJDpck-5UGJImDFiPV1Dk1XmGrxMvE1CPIuoPlRUQjVPTjhLTFgwVFVDMEdTNkJKMVdZWUdVOSQlQCN0PWcu"
+			linkNewTab={true}
 		/>
 	  </div>
 	  <div className="lg:hidden relative">
