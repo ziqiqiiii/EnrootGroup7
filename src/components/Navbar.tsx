@@ -6,7 +6,7 @@ import ClientDropdown from "./ClientDropdown";
 
 const Navbar = () => {
   return (
-    <nav className="flexBetween max-container padding-container relative z-30 py-5">
+    <nav className="flex justify-between items-center px-8 py-4">
       <Link href="/">
         <Image 
           src="/polar_bear_logo.png" 
@@ -19,12 +19,12 @@ const Navbar = () => {
         {NAV_LINKS.map((link) => (
             <Link href={link.href}
 					key={link.key} 
-					className="regular-16 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold">
+					className="regular-20 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold pl-12">
               {link.label}
             </Link>
         ))}
       </ul>
-	  <div className="lg:flexCenter">
+	  <div className="flex space-x-8">
 		<Button
 			type="button"
 			title="Sign Up Now"
