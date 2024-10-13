@@ -1,10 +1,20 @@
 'use client';
 import { useState, useEffect } from 'react';
 
-const Countdown = ({ targetDate }: {targetDate: any}) => {
+interface CountDownProps {
+  targetDate: string;
+}
+
+const Countdown = ({ targetDate }: CountDownProps) => {
   const calculateTimeLeft = () => {
     const difference = +new Date(targetDate) - +new Date();
-    let timeLeft:any = {};
+    interface TimeLeft {
+      days: number;
+      hours: number;
+      minutes: number;
+      seconds: number;
+    }
+    let timeLeft:TimeLeft = {days:0, hours:0, minutes:0, seconds:0};
 
     if (difference > 0) {
       timeLeft = {
