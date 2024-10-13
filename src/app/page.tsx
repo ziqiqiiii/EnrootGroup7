@@ -1,5 +1,6 @@
 import Countdown from "@/components/Countdown";
 import EventDetails from "@/components/EventDetails";
+
 export default function Home() {
   const launchDate = '2024-11-20T19:00:00';
 
