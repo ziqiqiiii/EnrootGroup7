@@ -11,8 +11,9 @@ const Navbar = () => {
         <Image 
           src="/polar_bear_logo.png" 
           alt="logo"
-          width={74}
-          height={29}
+          width={60}
+          height={40}
+          className="h-auto w-auto"
         />
       </Link>
       <ul className="hidden h-full gap-12 lg:flex">
