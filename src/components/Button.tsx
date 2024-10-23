@@ -15,7 +15,7 @@ const Button = ({ type, title, icon, variant, link, linkNewTab}: ButtonProps) =>
   const content = (
     <>
       {icon && <Image src={icon} alt={title} width={24} height={24} />}
-      <label className="bold-16 whitespace-nowrap">{title}</label>
+      <label className="bold-16 whitespace-nowrap text-dark-green">{title}</label>
     </>
   );
 
