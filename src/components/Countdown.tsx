@@ -43,10 +43,10 @@ const Countdown = ({ targetDate }: { targetDate: string }) => {
   ];
 
   return (
-    <div className="flex flexCenter space-x-8 items-center my-10">
+    <div className="flex flex-wrap justify-center space-x-8 items-center lg:my-10 my-3 mb-8">
       {timeUnits.map((unit) => (
         <div key={unit.label} className="flex flex-col text-dark-brown">
-          <span className="text-9xl font-bold">{unit.value}</span>
+          <span className="text-5xl sm:text-7xl md:text-9xl font-bold">{unit.value}</span>
           <span className="text-lg">{unit.label}</span>
         </div>
       ))}
