@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState, ReactNode } from 'react';
+import Loader from './Loader';
 
 interface ClientWrapperProps {
   children: ReactNode; // Accepts any React component as children
@@ -14,7 +15,9 @@ const ClientWrapper = ({ children }: ClientWrapperProps) => {
   }, []);
 
   if (!isClient) {
-    return <div>Loading...</div>;
+    return <div>
+      <Loader />
+    </div>;
   }
 
   return <>{children}</>;

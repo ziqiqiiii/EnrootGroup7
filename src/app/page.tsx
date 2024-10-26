@@ -2,7 +2,7 @@ import EventDetails from "@/components/EventDetails";
 
 export default function Home() {
   return (
-    <div className="space-y-20 flex flex-col items-center justify-center min-h-screen mt-[-150px]">
+    <div className="flex flex-col flexCenter items-center justify-center py-14 overflow-hidden">
       <EventDetails />
     </div>
   );

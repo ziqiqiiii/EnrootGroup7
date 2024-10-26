@@ -19,15 +19,14 @@ const Button = ({ type, title, icon, variant, link, linkNewTab}: ButtonProps) =>
     </>
   );
 
-  // If a link is provided, wrap the button with the Link component
   return link ? (
-    <Link href={link} className={`flexCenter gap-3 ${variant} border rounded-full cursor-pointer`}
+    <Link href={link} className={`flexCenter gap-3 ${variant} border rounded-full`}
                                 {...(linkNewTab ? { target: '_blank', rel: 'noopener noreferrer' } : '')}>
         {content}
     </Link>
   ) : (
     <button
-      className={`flexCenter gap-3 ${variant} border rounded-full cursor-pointer`}
+      className={`flexCenter gap-3 ${variant} border rounded-full`}
       type={type}
     >
       {content}

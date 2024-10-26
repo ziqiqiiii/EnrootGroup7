@@ -9,9 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "init": "^0.1.2",
     "next": "^15.0.0-canary.187",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "shadcn": "^1.0.0",
+    "styled-components": "^6.1.13"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -21,7 +24,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.14",
     "postcss": "^8.4.47",
-    "tailwindcss": "^3.4.13",
+    "tailwindcss": "^3.4.14",
     "typescript": "^5"
   }
 }

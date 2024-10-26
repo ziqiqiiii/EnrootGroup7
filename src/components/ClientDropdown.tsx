@@ -48,3 +48,9 @@ const ClientDropdown = () => {
 };
 
 export default ClientDropdown;
+
+
+// TODO
+// 1) loading spinner
+// 2) search about event landing page 
+//  - move current event details to hero component
