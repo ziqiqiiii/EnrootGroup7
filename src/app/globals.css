@@ -25,12 +25,12 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Inter;
+  font-family: serif;
 }
 
 @layer utilities {
   .btn_white { 
-    @apply  border-white bg-white px-8 py-3 text-green-50
+    @apply  border-white bg-white px-8 py-3 text-green-800 hover:bg-green-900 hover:text-brown-ish-white
   }
   .btn_white_text  { 
     @apply  border-white bg-white px-8 py-3 text-gray-90
@@ -43,6 +43,9 @@ body {
   }
   .btn_dark_green_outline  { 
     @apply border-gray-20 bg-green-90 px-8 py-5 text-white
+  }
+  .btn_dark_brown { 
+    @apply bg-stone-800 bg-opacity-90 px-8 py-4 text-white transition-all hover:bg-opacity-80
   }
   
   .footer-gradient {

@@ -1,23 +1,30 @@
 'use client';
 
 import { useEffect, useState, ReactNode } from 'react';
+import Loader from './Loader';
 
 interface ClientWrapperProps {
-  children: ReactNode; // Accepts any React component as children
+  children: ReactNode;
 }
 
 const ClientWrapper = ({ children }: ClientWrapperProps) => {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    setIsClient(true);
+    const timer = setTimeout(() => {
+      setIsClient(true);
+    }, 600);
+    return () => clearTimeout(timer);
   }, []);
 
   if (!isClient) {
-    return <div>Loading...</div>;
+    return <div>
+      <Loader />
+    </div>;
   }
 
   return <>{children}</>;
 };
 
 export default ClientWrapper;
+

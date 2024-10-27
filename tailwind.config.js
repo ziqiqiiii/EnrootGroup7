@@ -1,8 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
-   ],
+  ],
   darkMode: 'selector',
   theme: {
     extend: {
@@ -17,7 +20,7 @@ module.exports = {
       },
       colors: {
         green: {
-          50: '#30AF5B',
+          50: '#007566',
           90: '#292C27',
         },
         gray: {

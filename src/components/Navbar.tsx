@@ -6,7 +6,7 @@ import ClientDropdown from "./ClientDropdown";
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-between items-center px-8 py-4">
+    <nav className="relative flex justify-between items-center px-2 py-4 lg:px-8 lg:py-4 lg:h-36">
       <Link href="/">
         <Image 
           src="/polar_bear_logo.png" 
@@ -14,30 +14,33 @@ const Navbar = () => {
           width={60}
           height={40}
           className="h-auto w-auto"
+          priority={true}
         />
       </Link>
-      <ul className="hidden h-full gap-12 lg:flex">
-        {NAV_LINKS.map((link) => (
-            <Link href={link.href}
-					key={link.key} 
-					className="regular-20 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold pl-12">
-              {link.label}
-            </Link>
-        ))}
-      </ul>
-	  <div className="flex space-x-8">
-		<Button
-			type="button"
-			title="Sign Up Now"
-			icon="/add-user.png"
-			variant="btn_white shadow-2xl shadow-green-500/40"
-			link = "https://forms.office.com/r/hegwefLT3F"
-			linkNewTab={true}
-		/>
-	  </div>
-	  <div className="lg:hidden relative">
-		<ClientDropdown/>
-	  </div>
+      <div className="absolute left-1/2 transform -translate-x-1/2">
+        <ul className="hidden h-full gap-12 lg:flex justify-center items-center">
+          {NAV_LINKS.map((link) => (
+              <Link href={link.href}
+            key={link.key} 
+            className="regular-20 flex justify-items-center text-center cursor-pointer py-1.5 hover:font-bold">
+                {link.label}
+              </Link> 
+          ))}
+        </ul>
+      </div>
+      <div className="space-x-8 hidden lg:flex">
+        <Button
+          type="button"
+          title="Sign Up Now"
+          icon="/add-user.png"
+          variant="btn_white shadow-lg shadow-green-900/40"
+          link = "https://forms.office.com/r/hegwefLT3F"
+          linkNewTab={true}
+        />
+      </div>
+      <div className="lg:hidden relative">
+        <ClientDropdown/>
+      </div>
     </nav>
   )
 }

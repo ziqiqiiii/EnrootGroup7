@@ -26,7 +26,7 @@ const ClientDropdown = () => {
 		className="relative"
 	>
       <Image
-        src="/menu.png"
+        src="/icons8-menu-30.png"
         alt="menu"
         width={32}
         height={32}
@@ -48,3 +48,9 @@ const ClientDropdown = () => {
 };
 
 export default ClientDropdown;
+
+
+// TODO
+// 1) loading spinner
+// 2) search about event landing page 
+//  - move current event details to hero component

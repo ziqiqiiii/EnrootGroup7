@@ -26,11 +26,18 @@ const calculateTimeLeft = (targetDate: string): TimeLeft => {
 
 const Countdown = ({ targetDate }: { targetDate: string }) => {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft(targetDate));
+  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth <= 768);
 
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft(targetDate));
     }, 1000);
+
+    const handleResize = (() => {
+      setIsMobile(window.innerWidth <= 768);
+    })
+
+    window.addEventListener('resize', handleResize);
 
     return () => clearInterval(timer);
   }, [targetDate]);
@@ -40,17 +47,20 @@ const Countdown = ({ targetDate }: { targetDate: string }) => {
     { label: 'Hours', value: timeLeft.hours },
     { label: 'Minutes', value: timeLeft.minutes },
     { label: 'Seconds', value: timeLeft.seconds },
-  ];
+  ].filter(unit => !(isMobile && unit.label === 'Seconds'));
 
   return (
-    <div className="flex flex-wrap justify-center space-x-8 items-center lg:my-10 my-3 mb-8">
-      {timeUnits.map((unit) => (
-        <div key={unit.label} className="flex flex-col text-dark-brown">
-          <span className="text-5xl sm:text-7xl md:text-9xl font-bold">{unit.value}</span>
-          <span className="text-lg">{unit.label}</span>
-        </div>
-      ))}
+    <div className="bg-emerald-900 bg-opacity-10 rounded-5xl my-8 lg:mt-20 mt-14 hover:bg-opacity-20">
+      <div className="flex flex-wrap justify-center lg:space-x-8 space-x-5 items-center lg:my-10 my-5 lg:mx-8 mx-3">
+        {timeUnits.map((unit) => (
+          <div key={unit.label} className="flex flex-col lg:w-40 w-20  text-green-900 text-center items-center">
+            <span className={`text-7xl md:text-9xl font-bold font-serif`}>{unit.value}</span>
+            <span className="text-lg mt-6">{unit.label}</span>
+          </div>
+        ))}
+      </div>
     </div>
+
   );
 };
 
