@@ -6,7 +6,7 @@ import ClientDropdown from "./ClientDropdown";
 
 const Navbar = () => {
   return (
-    <nav className="relative flex justify-between items-center px-2 py-4 lg:px-8 lg:py-4 lg:h-36">
+    <nav className="fixed top-0 w-full z-50 flex justify-between items-center px-2 py-4 lg:px-8 lg:py-4 lg:h-36 bg-opacity-50 backdrop-blur-lg">
       <Link href="/">
         <Image 
           src="/polar_bear_logo.png" 
