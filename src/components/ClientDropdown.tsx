@@ -26,7 +26,7 @@ const ClientDropdown = () => {
 		className="relative"
 	>
       <Image
-        src="/menu.png"
+        src="/icons8-menu-30.png"
         alt="menu"
         width={32}
         height={32}

@@ -1,73 +1,54 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Loader = () => {
   return (
     <StyledWrapper>
-      <section className="dots-container">
-        <div className="dot" />
-        <div className="dot" />
-        <div className="dot" />
-        <div className="dot" />
-        <div className="dot" />
-      </section>
+      <div className="loader" />
     </StyledWrapper>
   );
 };
 
 const StyledWrapper = styled.div`
-  .dots-container {
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 100%;
-  width: 100%;
-}
+  align-items: center;
+  height: 80vh;
 
-.dot {
-  height: 20px;
-  width: 20px;
-  margin-right: 10px;
-  border-radius: 10px;
-  background-color: #b3d4fc;
-  animation: pulse 1.5s infinite ease-in-out;
-}
-
-.dot:last-child {
-  margin-right: 0;
-}
-
-.dot:nth-child(1) {
-  animation-delay: -0.3s;
-}
-
-.dot:nth-child(2) {
-  animation-delay: -0.1s;
-}
-
-.dot:nth-child(3) {
-  animation-delay: 0.1s;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(0.8);
-    background-color: #b3d4fc;
-    box-shadow: 0 0 0 0 rgba(178, 212, 252, 0.7);
+  .loader {
+    display: block;
+    --height-of-loader: 6px;
+    --loader-color: #406030;
+    width: 150px;
+    height: var(--height-of-loader);
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.1);
+    position: relative;
   }
 
-  50% {
-    transform: scale(1.2);
-    background-color: #6793fb;
-    box-shadow: 0 0 0 10px rgba(178, 212, 252, 0);
+  .loader::before {
+    content: "";
+    position: absolute;
+    background: var(--loader-color);
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-radius: 30px;
+    animation: moving 1s ease-in-out infinite;
   }
 
-  100% {
-    transform: scale(0.8);
-    background-color: #b3d4fc;
-    box-shadow: 0 0 0 0 rgba(178, 212, 252, 0.7);
+  @keyframes moving {
+    50% {
+      width: 100%;
+    }
+
+    100% {
+      width: 0;
+      right: 0;
+      left: unset;
+    }
   }
-}
 `;
 
 export default Loader;

@@ -6,7 +6,7 @@ import ClientDropdown from "./ClientDropdown";
 
 const Navbar = () => {
   return (
-    <nav className="relative flex justify-between items-center px-2 py-5 lg:px-8 lg:py-4 lg:h-36">
+    <nav className="relative flex justify-between items-center px-2 py-4 lg:px-8 lg:py-4 lg:h-36">
       <Link href="/">
         <Image 
           src="/polar_bear_logo.png" 
@@ -33,7 +33,7 @@ const Navbar = () => {
           type="button"
           title="Sign Up Now"
           icon="/add-user.png"
-          variant="btn_white shadow-2xl shadow-green-500/40"
+          variant="btn_white shadow-lg shadow-green-900/40"
           link = "https://forms.office.com/r/hegwefLT3F"
           linkNewTab={true}
         />
