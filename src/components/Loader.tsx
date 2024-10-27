@@ -17,9 +17,9 @@ const StyledWrapper = styled.div`
 
   .loader {
     display: block;
-    --height-of-loader: 6px;
+    --height-of-loader: 10px;
     --loader-color: #406030;
-    width: 150px;
+    width: 200px;
     height: var(--height-of-loader);
     border-radius: 30px;
     background-color: rgba(0, 0, 0, 0.1);
