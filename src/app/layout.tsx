@@ -18,7 +18,7 @@ export default function RootLayout({
         <header>
           <Navbar/>
         </header>
-        <main className="h-fit overflow-hidden">
+        <main className="h-fit overflow-hidden lg:mt-36 mt-24">
           {children}
         </main>
         {/* <Footer/> */}

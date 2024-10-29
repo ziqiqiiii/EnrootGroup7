@@ -53,7 +53,7 @@ const Countdown = ({ targetDate }: { targetDate: string }) => {
     <div className="bg-emerald-900 bg-opacity-10 rounded-5xl my-8 lg:mt-20 mt-14 hover:bg-opacity-20">
       <div className="flex flex-wrap justify-center lg:space-x-8 space-x-5 items-center lg:my-10 my-5 lg:mx-8 mx-3">
         {timeUnits.map((unit) => (
-          <div key={unit.label} className="flex flex-col lg:w-40 w-20  text-green-900 text-center items-center">
+          <div key={unit.label} className="flex flex-col lg:w-48 md:w-40 w-20  text-green-900 text-center items-center">
             <span className={`text-7xl md:text-9xl font-bold font-serif`}>{unit.value}</span>
             <span className="text-lg mt-6">{unit.label}</span>
           </div>
