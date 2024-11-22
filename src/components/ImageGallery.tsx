@@ -4,22 +4,23 @@ import React, { useState, useEffect, useRef } from "react";
 
 const ImageGallery = () => {
   const [images, setImages] = useState([
-    "https://plus.unsplash.com/premium_photo-1727895552599-fcd861505235?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1531058020387-3be344556be6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg",
-    "https://images.unsplash.com/photo-1729731321920-294d9e7b88af?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  ]);
+    "https://sutdapac-my.sharepoint.com/personal/jiahao_yao_mymail_sutd_edu_sg/Documents/Term%201/vs%20code/media/1F289604-1385-47AE-AFCC-4E642D71F7DA.jpeg",
+    "https://sutdapac-my.sharepoint.com/personal/jiahao_yao_mymail_sutd_edu_sg/Documents/Term%201/vs%20code/media/AFCC88EF-C84A-4E8D-8ACB-6A8DC0B060ED_1_102_o.jpeg",
+    "https://sutdapac-my.sharepoint.com/personal/jiahao_yao_mymail_sutd_edu_sg/Documents/Term%201/vs%20code/media/A9DF1EED-0BFC-464E-BEB8-A41A699E4D6F_1_102_o.jpeg",
+    "https://sutdapac-my.sharepoint.com/personal/jiahao_yao_mymail_sutd_edu_sg/Documents/Term%201/vs%20code/media/E2176622-4550-4721-BF9E-D0F6409B7168_4_5005_c.jpeg",
+    "https://sutdapac-my.sharepoint.com/personal/jiahao_yao_mymail_sutd_edu_sg/Documents/Term%201/vs%20code/media/IMG20241120204913.jpg",
+    "https://sutdapac-my.sharepoint.com/personal/jiahao_yao_mymail_sutd_edu_sg/Documents/Term%201/vs%20code/media/FA2CA769-5356-4BCF-89F2-B943E0AE2A4A_4_5005_c.jpeg",
+    "https://sutdapac-my.sharepoint.com/personal/jiahao_yao_mymail_sutd_edu_sg/Documents/Term%201/vs%20code/media/IMG20241120195130.jpg",
+    "https://sutdapac-my.sharepoint.com/personal/jiahao_yao_mymail_sutd_edu_sg/Documents/Term%201/vs%20code/media/IMG20241120195835.jpg",
+    "https://sutdapac-my.sharepoint.com/personal/jiahao_yao_mymail_sutd_edu_sg/Documents/Term%201/vs%20code/media/7C0F05A7-BE75-495C-B90E-3B95E34CA345_1_102_o.jpeg",
+    "https://sutdapac-my.sharepoint.com/personal/jiahao_yao_mymail_sutd_edu_sg/Documents/Term%201/vs%20code/media/IMG20241120205032.jpg",
+    "https://sutdapac-my.sharepoint.com/personal/jiahao_yao_mymail_sutd_edu_sg/Documents/Term%201/vs%20code/media/IMG20241120195130.jpg",
+    "https://sutdapac-my.sharepoint.com/personal/jiahao_yao_mymail_sutd_edu_sg/Documents/Term%201/vs%20code/media/42BA0EE4-20CF-4DF5-B5CF-B307D5C1B1EB_1_102_o.jpeg",
+    "https://sutdapac-my.sharepoint.com/personal/jiahao_yao_mymail_sutd_edu_sg/Documents/Term%201/vs%20code/media/467C6E42-CCB3-4C9F-A0D9-555C597B7A1A_1_102_o.jpeg",
+    "https://sutdapac-my.sharepoint.com/personal/jiahao_yao_mymail_sutd_edu_sg/Documents/Term%201/vs%20code/media/4F723D49-5F38-4F96-BCE8-67D4B0AC36CF_1_102_o.jpeg",
+    
+
+      ]);
   const [columns, setColumns] = useState(3);
   const imagesFetched = useRef(false);
 
