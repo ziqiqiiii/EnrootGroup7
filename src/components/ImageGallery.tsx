@@ -4,21 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 
 const ImageGallery = () => {
   const [images, setImages] = useState([
-    "https://sutdapac-my.sharepoint.com/personal/jiahao_yao_mymail_sutd_edu_sg/Documents/Term%201/vs%20code/media/1F289604-1385-47AE-AFCC-4E642D71F7DA.jpeg",
-    "https://sutdapac-my.sharepoint.com/personal/jiahao_yao_mymail_sutd_edu_sg/Documents/Term%201/vs%20code/media/AFCC88EF-C84A-4E8D-8ACB-6A8DC0B060ED_1_102_o.jpeg",
-    "https://sutdapac-my.sharepoint.com/personal/jiahao_yao_mymail_sutd_edu_sg/Documents/Term%201/vs%20code/media/A9DF1EED-0BFC-464E-BEB8-A41A699E4D6F_1_102_o.jpeg",
-    "https://sutdapac-my.sharepoint.com/personal/jiahao_yao_mymail_sutd_edu_sg/Documents/Term%201/vs%20code/media/E2176622-4550-4721-BF9E-D0F6409B7168_4_5005_c.jpeg",
-    "https://sutdapac-my.sharepoint.com/personal/jiahao_yao_mymail_sutd_edu_sg/Documents/Term%201/vs%20code/media/IMG20241120204913.jpg",
-    "https://sutdapac-my.sharepoint.com/personal/jiahao_yao_mymail_sutd_edu_sg/Documents/Term%201/vs%20code/media/FA2CA769-5356-4BCF-89F2-B943E0AE2A4A_4_5005_c.jpeg",
-    "https://sutdapac-my.sharepoint.com/personal/jiahao_yao_mymail_sutd_edu_sg/Documents/Term%201/vs%20code/media/IMG20241120195130.jpg",
-    "https://sutdapac-my.sharepoint.com/personal/jiahao_yao_mymail_sutd_edu_sg/Documents/Term%201/vs%20code/media/IMG20241120195835.jpg",
-    "https://sutdapac-my.sharepoint.com/personal/jiahao_yao_mymail_sutd_edu_sg/Documents/Term%201/vs%20code/media/7C0F05A7-BE75-495C-B90E-3B95E34CA345_1_102_o.jpeg",
-    "https://sutdapac-my.sharepoint.com/personal/jiahao_yao_mymail_sutd_edu_sg/Documents/Term%201/vs%20code/media/IMG20241120205032.jpg",
-    "https://sutdapac-my.sharepoint.com/personal/jiahao_yao_mymail_sutd_edu_sg/Documents/Term%201/vs%20code/media/IMG20241120195130.jpg",
-    "https://sutdapac-my.sharepoint.com/personal/jiahao_yao_mymail_sutd_edu_sg/Documents/Term%201/vs%20code/media/42BA0EE4-20CF-4DF5-B5CF-B307D5C1B1EB_1_102_o.jpeg",
-    "https://sutdapac-my.sharepoint.com/personal/jiahao_yao_mymail_sutd_edu_sg/Documents/Term%201/vs%20code/media/467C6E42-CCB3-4C9F-A0D9-555C597B7A1A_1_102_o.jpeg",
-    "https://sutdapac-my.sharepoint.com/personal/jiahao_yao_mymail_sutd_edu_sg/Documents/Term%201/vs%20code/media/4F723D49-5F38-4F96-BCE8-67D4B0AC36CF_1_102_o.jpeg",
-    
+
 
       ]);
   const [columns, setColumns] = useState(3);
