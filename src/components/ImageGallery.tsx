@@ -4,9 +4,8 @@ import React, { useState, useEffect, useRef } from "react";
 
 const ImageGallery = () => {
   const [images, setImages] = useState([
-
-
-      ]);
+    "https://m.media-amazon.com/images/I/51a+8Jwt+nL._AC_UF894,1000_QL80_.jpg",
+  ]);
   const [columns, setColumns] = useState(3);
   const imagesFetched = useRef(false);
 
